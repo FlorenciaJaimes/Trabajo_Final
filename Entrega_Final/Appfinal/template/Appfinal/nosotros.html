@@ -1,0 +1,42 @@
+{% extends "Appfinal/index.html" %}
+{% load static %}
+
+{% block section1 %}
+
+<div style="position: relative;">
+    <img src="{% static 'Appfinal\imagenes\vasos_celebrando.jpg'%}" alt="Estilos " style="width: 100%;">
+    <div style="position: absolute; top: 70%; left: 50%; transform: translate(-50%, -50%); text-align: center;">
+      <h1 style="font-size: 40px; color: rgba(13, 12, 12, 0.926); padding: 10px;">Quienes somos?</h1>
+    </div>
+</div>
+
+
+<head>
+    <title>Nuestra Misión</title>
+</head>
+<body>
+    <h1>Nuestra Misión</h1>
+
+    <div style="display: flex;">
+        <p style="flex: 1;">Argentina Brewers es un grupo de personas interesadas en difundir la Cerveza Artesanal poniendo énfasis en su carácter único, la variedad de estilos y la camaradería establecida entre cerveceros de distintos países.</p>
+        <img src="{% static 'Appfinal\imagenes\craft.jpg'%}" alt="Imagen" style="width: 200px; height: auto; margin-left: 20px;">
+    </div>
+ <p>Buscamos que la mayor información de los procesos y estilos llegue a la mayor cantidad de personas posible. Establecemos relación con pares alrededor del mundo para poder publicar reportajes, recetas, información y también datos de empresas, cervecerías, bares y distribuidores de insumos que brinden sus productos o servicios para así facilitar el acceso a los mismos y poder también ofrecer promociones y descuentos para que al interesado en cocinar o beber cerveza artesanal le resulte más accesible.</p>
+
+    <p>Apoyamos la difusión de todas las iniciativas para la mejora de los procesos, el conocimiento técnico, cursos, copas y eventos que permitan el crecimiento de esta bebida.</p>
+</body>
+<img src="{% static 'Appfinal\imagenes\sirviendo.jpg'%}" alt="Estilos " style="width: 100%;">
+<br>
+<div>
+  <h2>Nuestra visión</h2>
+  <p>Queremos que la información para elaborar más y mejor Cerveza Artesanal llegue a la mayor cantidad de gente posible. Entrevistaremos a la mayor cantidad de personas que estén involucradas en este camino para ser la vía de transmisión de esa información.</p>
+  <p>Nuestro objetivo es lograr que las personas tengan un mayor acceso a los productos y servicios acorde a estos objetivos, por lo que haremos acuerdos para lograr promociones, descuentos y beneficios.</p>
+  <ul>
+      <li>Poner en contacto a cerveceros artesanales de todo Latinoamérica.</li>
+      <li>Ampliar el conocimiento brindando capacitaciones y cursos.</li>
+      <li>Incrementar el consumo de cerveza artesanal.</li>
+  </ul>
+</div>
+
+
+{% endblock %}

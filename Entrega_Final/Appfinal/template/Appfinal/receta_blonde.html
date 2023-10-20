@@ -1,0 +1,61 @@
+{% extends "Appfinal/index.html" %}
+{% load static %}
+
+{% block section1 %}
+
+<div>
+  <img src="{% static 'Appfinal\imagenes\blonde.png'%}" alt="Blonde Beer">
+    <h2>Blonde Ale </h2>
+    <h3>Características del estilo</h3>
+    <ul>
+      <li>Impresión general: Cerveza artesanal americana fácil de beber, accesible y orientada a la malta, a menudo con interesantes notas de fruta, lúpulo o malta de carácter. Bien equilibrada y limpia, es una pinta refrescante sin sabores agresivos.</li>
+      <li>Aspecto: De color amarillo claro a dorado intenso. Claro a brillante. Cabeza blanca de baja a media, con buena retención.</li>
+      <li>Aroma: Aroma ligero a moderado a malta, generalmente neutro o granulado, posiblemente con una ligera nota de pan o caramelo. Un aroma afrutado de bajo a moderado es opcional, pero aceptable. Puede tener un aroma de lúpulo de bajo a medio, y puede reflejar casi cualquier variedad de lúpulo, aunque son comunes las notas cítricas, florales, afrutadas y especiadas. Perfil de fermentación limpio.</li>
+      <li>Sabor: Sabor inicial suave a malta, pero también puede tener un ligero sabor a malta (por ejemplo, a pan, tostado, galleta, trigo). Los sabores a caramelo suelen estar ausentes; si están presentes, suelen ser notas de caramelo o miel de bajo color. Ésteres afrutados de bajos a medios opcionales, pero son bienvenidos. Sabor a lúpulo de ligero a moderado (cualquier variedad), pero no debe ser excesivamente agresivo. Amargor medio-bajo a medio, pero el equilibrio es normalmente hacia la malta o incluso entre la malta y el lúpulo. Termina de medio a ligeramente maltoso; la impresión de dulzor suele ser una expresión de menor amargor que de dulzor residual real. Perfil de fermentación limpio.</li>
+      <li>Sensación en Boca: Cuerpo medio-ligero a medio. Carbonatación media a alta. Suave sin ser pesado.</li>
+      <li>Historia: Un estilo de cerveza artesanal estadounidense producido como una alternativa de producción más rápida a las American Lagers standards. Se cree que se produjo por primera vez en 1987 en Catamount. A menudo se la considera una cerveza de la casa para los que comienzan a tomar cerveza artesanal.</li>
+    </ul>
+  </div>
+  
+  <div>
+    <h2>Receta de cerveza Blonde Ale</h2>
+    <h3>Ingredientes:</h3>
+    <ul>
+      <li>Maltas:
+        <ul>
+          <li>95% Pilsen boortmalt</li>
+          <li>3% Carapils Weyermann</li>
+          <li>2% Carared Weyermann</li>
+        </ul>
+      </li>
+      <li>Lúpulo: Apolo (buscar 15 ibus)</li>
+      <li>Clarificante: Opcional (usamos Whirlfloc T de Kerry 15 minutos antes de terminar la ebullición como clarificante).</li>
+      <li>Levadura: Fermentis SafAle S04 0,8 gramos por litro.</li>
+      <li>Agua: Ciudad de Buenos Aires- Argentina. Agua de lavado a 78°. Buscar 50 ppm de calcio agregando el doble de cloruro de calcio que de sulfato.</li>
+    </ul>
+    <h3>Datos Generales</h3>
+    <ul>
+      <li>Densidad Inicial (DI): 1050</li>
+      <li>Densidad Final (DF): 1012</li>
+      <li>Lata Blonde Ale Hormiga Negra</li>
+    </ul>
+    <h3>Proceso</h3>
+    <ul>
+      <li>Maceración:
+        <ul>
+          <li>PH de macerado: 5,2</li>
+          <li>Temperatura de macerado: 62°C</li>
+        </ul>
+      </li>
+      <li>Fermentación:
+        <ul>
+          <li>Temperatura de fermentación: 17°C</li>
+          <li>Liberamos temperatura cuando la fermentación superó el 50%, más o menos en 1028-1030.</li>
+        </ul>
+      </li>
+    </ul>
+    <img src="{% static 'Appfinal\imagenes\receta-blonde.jpg'%}" alt="Blonde Beer">
+  </div>
+
+
+{% endblock %}

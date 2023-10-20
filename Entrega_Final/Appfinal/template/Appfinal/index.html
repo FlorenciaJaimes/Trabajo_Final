@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        
+        <title>Bienvenido  - Start Bootstrap Template</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="{% static 'Appfinal/css/styles.css' %}" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- Responsive navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#!">Ibirra</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="{% url 'Inicio' %}">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'Nosotros' %}">Nosotros</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#!">Contacto</a></li>
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                Estilos de Cerveza
+                            </button>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="{% url 'Ipa' %}">Ipa</a></li>
+                              <li><a class="dropdown-item" href="{% url 'Apa' %}">Apa</a></li>
+                              <li><a class="dropdown-item" href="{% url 'Scotish' %}">Scotish</a></li>
+                              <li><a class="dropdown-item" href="{% url 'Golden' %}">Golden</a></li>
+                            </ul>
+                        </div>
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                Recetas 
+                            </button>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="{% url 'RecetaIpa' %}">Receta Ipa</a></li>
+                              <li><a class="dropdown-item" href="{% url 'RecetaPorter' %}">Receta Porter</a></li>
+                              <li><a class="dropdown-item" href="{% url 'RecetaBlonde' %}">Receta Blonde</a></li>
+                            </ul>
+                        </div>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'VerBD' %}">Ver BD</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'CargarEstilo' %}">Cargar Estilos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'CargarIngredientes' %}">Cargar Ingredientes</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'BuscarEstilo' %}">Buscar Estilo</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="{% url 'Blog' %}">Blog</a></li>
+                    </ul>
+                </div>
+                {# DROPDOWN PARA LA CUENTA DE USUARIO #}
+                {% if request.user.is_authenticated %}
+                {% if user_avatar %}
+                <img src="{{user_avatar}}" alt="" style="height: 40px;width: 50px;">
+                {% endif %}
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        {{ request.user.username }}
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="{% url 'EditarPerfil' %}">EditarPerfil</a></li>
+                        <li><a class="dropdown-item" href="{% url 'Logout' %}">Cerrar sesión</a></li>
+                    </ul>
+                </div>
+                
+                {% else %}
+                
+                <div class="dropdown">
+                                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                      Cuenta
+                                  </button>
+                                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                      <li><a class="dropdown-item" href="{% url 'Login' %}">Inciar Sesión</a></li>
+                                      <li><a class="dropdown-item" href="{% url 'Registrarse' %}">Crear cuenta</a></li>
+                                  </ul>
+                              </div>
+                          {% endif %}
+            </div>
+        </nav>
+        <!-- Page content-->
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-lg-8">
+                    <!-- Post content-->
+                    <article>
+                        <!-- Post header-->
+                        <header class="mb-4">
+                            <!-- Post title-->
+                            <h1 class="fw-bolder mb-1">Welcome to Blog Post!</h1>
+                            <!-- Post meta content-->
+                            <script>
+                                function mostrarFechaHora() {
+                                  var fechaHora = new Date();
+                                  var fecha = fechaHora.toLocaleDateString();
+                                  var hora = fechaHora.toLocaleTimeString();
+                                
+                                  document.getElementById("fecha").innerText = "Fecha: " + fecha;
+                                  document.getElementById("hora").innerText = "Hora: " + hora;
+                                }
+                                
+                                setInterval(mostrarFechaHora, 1000); // Actualiza cada segundo
+                                </script>
+                                <body>
+                                  <h2>Fecha y Hora Actual</h2>
+                                  <p id="fecha"></p>
+                                  <p id="hora"></p>
+                                </body>
+                            <!-- Post categories-->
+                            <a class="badge bg-secondary text-decoration-none link-light" href="#!">Web Design</a>
+                            <a class="badge bg-secondary text-decoration-none link-light" href="#!">Freebies</a>
+                        </header>
+                        <!-- Preview image figure-->
+                        <figure class="mb-4">
+                            <img class="img-fluid rounded" src="{% static 'Appfinal\imagenes\cerveza-artesanal_1.jpg'%}" alt="Cervesa Artesanal" style="width: 120%; max-width: 1300px;">
+                        </figure>
+                        
+                        
+                        {% block section1 %}
+                        {% endblock %}
+                        
+                        {% block section2 %}
+                        <h2>{{ mensaje }}</h2>
+                        {% endblock %}
+                        
+
+                        
+               <br>
+               <br>
+               <br>
+
+        <!-- Footer-->
+        <footer class="py-5 bg-dark">
+            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2023</p></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>

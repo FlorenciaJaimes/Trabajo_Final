@@ -1,0 +1,77 @@
+{% extends "Appfinal/index.html" %}
+{% load static %}
+
+{% block section1 %}
+
+<div>
+  <img src="{% static 'Appfinal\imagenes\ipa.jpg'%}" alt="Ipa Beer">
+
+  <head>
+      <title>Receta de American IPA</title>
+  </head>
+  <body>
+  
+  <h2>Receta de American IPA</h2>
+  
+  <h3>Características del Estilo:</h3>
+  <p>La American IPA es un estilo de cerveza artesanal con un fuerte enfoque en el lúpulo, lo que resulta en un sabor amargo y aromático. Tiene un color dorado a ambarino, con un cuerpo medio y un perfil de sabor dominado por notas de lúpulo. El equilibrio entre la malta y el lúpulo es importante, y la limpieza en el perfil de fermentación es esencial.</p>
+  
+  <h3>Ingredientes:</h3>
+  <ul>
+      <li>Maltas:
+          <ul>
+              <li>90% Pale Ale Malt</li>
+              <li>5% Munich Malt</li>
+              <li>5% Crystal Malt 40L</li>
+          </ul>
+      </li>
+      <li>Lúpulo: Cascade (buscar 40 IBUs) para amargor y aroma.</li>
+      <li>Clarificante: Opcional (puede utilizar Whirlfloc o Irish Moss 15 minutos antes de terminar la ebullición).</li>
+      <li>Levadura: SafAle US-05 (0,8 gramos por litro).</li>
+      <li>Agua: Utilice agua con un equilibrio adecuado de sulfatos y cloruros para realzar el sabor del lúpulo. Ajuste según las características de su agua local.</li>
+  </ul>
+  
+  <h3>Datos Generales:</h3>
+  <ul>
+      <li>Densidad Inicial (DI): 1060</li>
+      <li>Densidad Final (DF): 1015</li>
+      <li>Volumen: 19 litros</li>
+  </ul>
+  
+  <h3>Proceso:</h3>
+  <ul>
+      <li>Maceración:
+          <ul>
+              <li>PH de macerado: 5,2</li>
+              <li>Temperatura de macerado: 67°C</li>
+              <li>Tiempo de macerado: 60 minutos</li>
+          </ul>
+      </li>
+      <li>Ebullición:
+          <ul>
+              <li>Hervir durante 60 minutos.</li>
+              <li>Añadir lúpulo Cascade para amargor al inicio de la ebullición (60 minutos) para alcanzar 40 IBUs.</li>
+              <li>Añadir lúpulo Cascade para aroma en los últimos 10 minutos de la ebullición.</li>
+          </ul>
+      </li>
+      <li>Fermentación:
+          <ul>
+              <li>Temperatura de fermentación: 18°C</li>
+              <li>Fermentar durante 2 semanas o hasta que alcance la densidad final.</li>
+          </ul>
+      </li>
+      <li>Dry Hopping (Opcional):
+          <ul>
+              <li>Puede agregar 30 gramos de lúpulo Cascade en el fermentador secundario o en la fase final de la fermentación para intensificar el aroma a lúpulo.</li>
+          </ul>
+      </li>
+  </ul>
+  
+  </body>
+  </html>
+  
+    <img src="{% static 'Appfinal\imagenes\receta-american-ipa.jpg'%}" alt="Blonde Beer">
+  </div>
+
+
+{% endblock %}

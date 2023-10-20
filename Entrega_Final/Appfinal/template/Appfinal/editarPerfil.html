@@ -1,0 +1,20 @@
+{% extends "Appfinal/index.html" %}
+{% load static %}
+
+{% block section2 %}
+
+<h1>Editar Perfil</h1>
+<h1>de {{ usuario }}</h1>
+
+<form action="" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <table>
+        {{ miFormulario.as_table }}
+    </table>
+   
+   
+    <input type="submit" value="Acrualizar">
+
+</form>
+
+{% endblock %}

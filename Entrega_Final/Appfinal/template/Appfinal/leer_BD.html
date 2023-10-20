@@ -1,0 +1,26 @@
+{% extends "Appfinal/index.html" %}
+{% load static %}
+
+{% block section1 %}
+
+<h1>Todos los Estilos Cargados</h1>
+<ul>
+
+    {% for estilo in estilos %}
+        <img src="{% static 'Appfinal\imagenes\estilos.jpg'%}" class="card-img-top" alt="...">
+              <h5 class="card-title">{{ estilo.nombre }}</h5>
+              <p class="card-text">Color: {{ estilo.color }}</p>
+              <p class="card-text">Amargor: {{ estilo.amargor }}</p>
+              <h5 class="card-title"> Descripcion </h5>
+              <p class="card-text">{{ estilo.descripcion }}</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+          
+      <button>
+          <a onclick="return confirm('¿Estás seguro de que deseas eliminar el estilo?')" href="{% url 'DeleteEstilo' estilo.id %}">Eliminar</a>
+          <a href="{% url 'EditarEstilo' estilo.id %}">Editar</a>
+      </button>
+  {% endfor %}
+</ul>
+
+
+{% endblock %}

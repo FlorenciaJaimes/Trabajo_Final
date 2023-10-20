@@ -1,0 +1,16 @@
+{% extends "Appfinal/index.html" %}
+{% load static %}
+
+{% block section1 %}
+
+<h1>Ver Estilos</h1>
+
+{% for estilo in estilos %}
+    <li>Nombre: {{ estilo.nombre }} </li>
+    <li>Color: {{ estilo.color }} </li>
+    <li>Amargor: {{ estilo.amargor }} </li>
+    <br>
+
+{% endfor %}
+
+{% endblock %}

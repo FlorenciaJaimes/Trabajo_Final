@@ -1,0 +1,21 @@
+{% extends "Appfinal/index.html" %}
+{% load static %}
+
+{% block section1 %}
+<img src="{% static 'Appfinal\imagenes\estilos.jpg'%}" alt="Estilos ">
+<h1>Cargar Estilo</h1>
+<body>
+
+    <form action="" method="POST">
+        {% csrf_token %}
+        <p>Nombre: <input type="text" name="nombre"></p>
+        <p>Color: <input type="text" name="color"></p>
+        <p>Amargor: <input type="text" name="amargor"></p>
+        <p>Descripción: <textarea name="descripcion"></textarea></p>
+
+        <input type="submit" value="Enviar">
+
+    </form>
+</body>
+
+{% endblock %}

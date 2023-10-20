@@ -1,0 +1,22 @@
+{% extends "Appfinal/index.html" %}
+{% load static %}
+
+{% block section1 %}
+
+<img src="{% static 'Appfinal\imagenes\ingredientes.jpg'%}" alt="Estilos ">
+<h1>Cargar Ingredientes</h1>
+<body>
+
+    <form action="" method="POST">
+        {% csrf_token %}
+        <p>Estilo: <input type="text" name="estilo"></p>
+        <p>Malta: <input type="text" name="malta"></p>
+        <p>Lupulo: <input type="text" name="lupulo"></p>
+        <p>Levadura: <input type="text" name="levadura"></p>
+
+        <input type="submit" value="Enviar">
+
+    </form>
+</body>
+
+{% endblock %}

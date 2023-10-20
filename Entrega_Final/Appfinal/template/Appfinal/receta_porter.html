@@ -1,0 +1,69 @@
+{% extends "Appfinal/index.html" %}
+{% load static %}
+
+{% block section1 %}
+
+<div>
+  <img src="{% static 'Appfinal\imagenes\porter.jpg'%}" alt="Blonde Beer">
+    
+      <title>Receta de Porter</title>
+  </head>
+  <body>
+  
+  <h2>Receta de Porter</h2>
+  
+  <h3>Características del Estilo:</h3>
+  <p>La Porter es un estilo de cerveza artesanal británico conocido por su sabor a malta tostada y notas de cacao y café. Tiene un color oscuro a marrón, con un cuerpo medio y un perfil de sabor rico y maltoso. El amargor es suave, y las notas de lúpulo suelen ser sutiles. La fermentación limpia es importante para destacar las cualidades de la malta tostada.</p>
+  
+  <h3>Ingredientes:</h3>
+  <ul>
+      <li>Maltas:
+          <ul>
+              <li>85% Malta Pale</li>
+              <li>10% Malta Chocolate</li>
+              <li>5% Malta Crystal 60L</li>
+          </ul>
+      </li>
+      <li>Lúpulo: East Kent Goldings (buscar 25 IBUs) para amargor y aroma.</li>
+      <li>Clarificante: Opcional (puede utilizar Irish Moss 15 minutos antes de terminar la ebullición).</li>
+      <li>Levadura: SafAle S-04 (0,8 gramos por litro).</li>
+      <li>Agua: Utilice agua con un equilibrio adecuado de sulfatos y cloruros para realzar el sabor de la malta. Ajuste según las características de su agua local.</li>
+  </ul>
+  
+  <h3>Datos Generales:</h3>
+  <ul>
+      <li>Densidad Inicial (DI): 1055</li>
+      <li>Densidad Final (DF): 1012</li>
+      <li>Volumen: 19 litros</li>
+  </ul>
+  
+  <h3>Proceso:</h3>
+  <ul>
+      <li>Maceración:
+          <ul>
+              <li>PH de macerado: 5,2</li>
+              <li>Temperatura de macerado: 68°C</li>
+              <li>Tiempo de macerado: 60 minutos</li>
+          </ul>
+      </li>
+      <li>Ebullición:
+          <ul>
+              <li>Hervir durante 60 minutos.</li>
+              <li>Añadir lúpulo East Kent Goldings para amargor al inicio de la ebullición (60 minutos) para alcanzar 25 IBUs.</li>
+              <li>Añadir lúpulo East Kent Goldings para aroma en los últimos 10 minutos de la ebullición.</li>
+          </ul>
+      </li>
+      <li>Fermentación:
+          <ul>
+              <li>Temperatura de fermentación: 19°C</li>
+              <li>Fermentar durante 2 semanas o hasta que alcance la densidad final.</li>
+          </ul>
+      </li>
+  </ul>
+
+
+    <img src="{% static 'Appfinal\imagenes\receta-porter.jpg'%}" alt="Blonde Beer">
+  </div>
+
+
+{% endblock %}
